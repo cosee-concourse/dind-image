@@ -47,7 +47,7 @@ run:
           # execute your tasks e.g.
           docker-compose -f docker-compose-runTasks.yml run testservice echo "Hello World"
           rc=$?                               # exit code of testservice
-          docker-compose down
+          docker-compose down                 # required
           exit $rc
 
 inputs:
