@@ -9,7 +9,7 @@ ENV DOCKER_VERSION=1.13.1 \
 
 # Install Docker, Docker Compose
 RUN apk --update --no-cache \
-        add curl device-mapper mkinitfs zsh e2fsprogs e2fsprogs-extra iptables openrc && \
+        add curl device-mapper mkinitfs zsh e2fsprogs e2fsprogs-extra iptables supervisor && \
         curl https://get.docker.com/builds/Linux/x86_64/docker-${DOCKER_VERSION}.tgz | tar zx && \
         mv /docker/* /bin/ && chmod +x /bin/docker* \
     && \
@@ -47,8 +47,7 @@ ENV CODEP_COMPOSE=/usr/bin/docker-compose\ up
 # Its usage would be something like: source /docker.lib.sh && start_docker "" "" "-g=$(pwd)/graph"
 COPY docker-lib.sh /docker-lib.sh
 
-COPY dockerinit /etc/init.d/dockerinit
-WORKDIR /etc/init.d
-RUN rc-update add dockerinit default
+WORKDIR /etc/supervisor.d
+COPY dockerinit.conf /etc/supervisor.d/dockerinit.conf
 
 ENTRYPOINT ["entrykit", "-e"]
