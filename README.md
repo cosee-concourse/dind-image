@@ -100,3 +100,7 @@ run:
 inputs:
     - name: source
 ```
+
+===
+
+This project uses code of [mumoshu/dcind](https://github.com/mumoshu/dcind)
