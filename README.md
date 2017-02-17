@@ -101,6 +101,5 @@ inputs:
     - name: source
 ```
 
-===
-
+## Contributing
 This project uses code of [mumoshu/dcind](https://github.com/mumoshu/dcind)
