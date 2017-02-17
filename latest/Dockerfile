@@ -48,6 +48,7 @@ ENV CODEP_COMPOSE=/usr/bin/docker-compose\ up
 COPY docker-lib.sh /docker-lib.sh
 
 WORKDIR /etc/supervisor.d
-COPY dockerinit.conf /etc/supervisor.d/dockerinit.conf
+COPY dockerinit.ini /etc/supervisor.d/dockerinit.ini
+COPY rundocker.sh /etc/supervisor.d/rundocker.sh
 
 ENTRYPOINT ["entrykit", "-e"]
