@@ -18,12 +18,12 @@ jobs:
     trigger: true
   - task: runDockerCompose
     privileged: true        # required
-    file: source/path_to_job_definition/jobDefinition.yml
+    file: source/path_to_task_definition/taskDefinition.yml
     
 ... 
 ```
 
-Job definition (e.g. jobDefinition.yml):
+Task definition (e.g. taskDefinition.yml):
 
 ``` yaml
 platform: linux
@@ -66,12 +66,12 @@ jobs:
     trigger: true
   - task: runDockerContainer
     privileged: true        # required
-    file: source/path_to_job_definition/jobDefinition.yml
+    file: source/path_to_task_definition/taskDefinition.yml
     
 ... 
 ```
 
-Job definition (e.g. jobDefinition.yml):
+Task definition (e.g. taskDefinition.yml):
 
 ``` yaml
 platform: linux
