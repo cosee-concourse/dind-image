@@ -32,8 +32,7 @@ image_resource:
         type: docker-image
         source: {
         repository: quay.io/cosee-concourse/dind,
-        tag: "latest",
-        privileged: true }
+        tag: "latest" }
 
 run:
         path: sh
@@ -80,8 +79,7 @@ image_resource:
         type: docker-image
         source: {
         repository: quay.io/cosee-concourse/dind,
-        tag: "latest",
-        privileged: true }
+        tag: "latest" }
 
 run:
         path: sh
